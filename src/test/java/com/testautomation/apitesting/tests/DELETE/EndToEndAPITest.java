@@ -22,9 +22,9 @@ import java.io.IOException;
 import static utils.FileNameConstants.PATCH_API_REQUEST_BODY;
 import static utils.FileNameConstants.POST_API_REQUEST_BODY;
 
-public class EndToEndAPITestt extends BaseTest {
+public class EndToEndAPITest extends BaseTest {
     //Logger initialization
-    private static final Logger logger = LogManager.getLogger(EndToEndAPITestt.class);
+    private static final Logger logger = LogManager.getLogger(EndToEndAPITest.class);
 
     @Test
     public void deleteAPIRequest() {
