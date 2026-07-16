@@ -15,6 +15,7 @@
   </properties>
 
     <build>
+        <!-- use this plugin to run from cmd prompt-->
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -31,12 +32,12 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M1</version> <!--<version>3.7.0</version> -->
-                <configuration>
-                    <suiteXmlFiles>
-                        <!--suppress UnresolvedMavenProperty -->
-                        <suiteXmlFile>${suitefilename}</suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>
+<!--                <configuration>-->
+<!--                    <suiteXmlFiles>-->
+<!--                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+<!--                        <suiteXmlFile>testng.xml</suiteXmlFile>-->
+<!--                    </suiteXmlFiles>-->
+<!--                </configuration>-->
             </plugin>
         </plugins>
     </build>
@@ -112,9 +113,30 @@
           <version>5.5.7</version>
           <scope>compile</scope>
       </dependency>
-      <!--use to run from terminal -->
+      <!--use for logger -->
 
+      <dependency>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-slf4j-impl</artifactId>
+          <version>2.20.0</version>
+          <scope>test</scope>
+      </dependency>
 
+      <!-- read csv test data input-->
+      <dependency>
+          <groupId>com.opencsv</groupId>
+          <artifactId>opencsv</artifactId>
+          <version>5.12.0</version>
+          <scope>compile</scope>
+      </dependency>
+
+      <!-- excel test data reader -->
+      <dependency>
+          <groupId>com.codoid.products</groupId>
+          <artifactId>fillo</artifactId>
+          <version>1.23</version>
+          <scope>compile</scope>
+      </dependency>
 
         </dependencies>
       </project>
